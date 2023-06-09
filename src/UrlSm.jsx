@@ -16,7 +16,6 @@ function UrlSm() {
     } catch (error) {
       toast.error("Session Timeout");
       setCloseModal(false);
-      setRefreshTable((prev) => !prev);
     }
   }
 
@@ -32,7 +31,10 @@ function UrlSm() {
     >
       {!closeModal && <Modals setCloseModal={setCloseModal} />}
       <NavBar isLoggedIn={closeModal} setCloseModal={setCloseModal} />
-      <MainSection setRefreshTable={setRefreshTable} />
+      <MainSection
+        setRefreshTable={setRefreshTable}
+        setCloseModal={setCloseModal}
+      />
       <div className="h-[20vw] w-screen bg-[url('../public/curves.svg')] bg-cover bg-bottom bg-no-repeat" />
       <Table refreshTable={refreshTable} isLogged={closeModal} />
     </div>
