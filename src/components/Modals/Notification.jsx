@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
-import Button from "../UI/buttons/button";
+import Button from "../UI/buttons/Button";
 
 const Notification = ({ children, buttonName, title, onClickHandler }) => {
   return (

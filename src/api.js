@@ -2,7 +2,8 @@ import axios from "axios";
 
 const restApi = axios.create(
     {
-        baseURL: "http://localhost:8000/",
+        // baseURL: "http://localhost:8000/",
+        baseURL: "https://url-sm-te7y.onrender.com/",
         headers: {
             'Content-Type': 'application/json'
         }

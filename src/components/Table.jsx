@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import restApi from "../api";
-import { toast } from "react-hot-toast";
 import Tr from "./Table/Tr";
 
 // eslint-disable-next-line react/prop-types

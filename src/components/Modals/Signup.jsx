@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { toast } from "react-hot-toast";
 import PasswordInp from "../UI/inputs/PasswordInp";
 import BackButton from "../UI/buttons/BackButton";
-import Button from "../UI/buttons/button";
+import Button from "../UI/buttons/Button";
 import restApi from "../../api";
 
 const SignIn = ({

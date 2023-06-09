@@ -4,7 +4,7 @@
 import { useEffect, useRef, useState } from "react";
 import { toast } from "react-hot-toast";
 import OtpInput from "../UI/inputs/OtpInput";
-import Button from "../UI/buttons/button";
+import Button from "../UI/buttons/Button";
 import restApi from "../../api";
 
 const OTPcheck = ({ setOpenOtpCheckModal, setOpenLoginModal, userData }) => {
