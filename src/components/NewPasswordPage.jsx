@@ -6,7 +6,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "react-hot-toast";
 import PasswordInp from "./UI/inputs/PasswordInp";
-import Button from "./UI/buttons/button";
+import Button from "./UI/buttons/Button";
 import restApi from "../api";
 
 const NewPasswordPage = () => {
