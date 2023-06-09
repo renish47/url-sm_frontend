@@ -4,7 +4,7 @@ import { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
 const MainSection = ({ setRefreshTable, setCloseModal }) => {
-  const [isLoading, setIsLoading] = useState(!false);
+  const [isLoading, setIsLoading] = useState(false);
 
   async function submitHandler(event) {
     event.preventDefault();
