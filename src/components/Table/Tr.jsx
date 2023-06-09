@@ -5,7 +5,8 @@ import { useState } from "react";
 import restApi from "../../api";
 import { toast } from "react-hot-toast";
 
-const baseUrl = "localhost:5173/";
+// const baseUrl = "localhost:5173/";
+const baseUrl = "url-sm.netlify.app/";
 
 const Tr = ({ url, fetchData }) => {
   const [isDeleteButtonClicked, setisDeleteButtonClicked] = useState(false);
