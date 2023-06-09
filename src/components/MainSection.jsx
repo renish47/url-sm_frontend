@@ -3,8 +3,8 @@ import restApi from "../api";
 import { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
-const MainSection = ({ setRefreshTable }) => {
-  const [isLoading, setIsLoading] = useState(false);
+const MainSection = ({ setRefreshTable, setCloseModal }) => {
+  const [isLoading, setIsLoading] = useState(!false);
 
   async function submitHandler(event) {
     event.preventDefault();
@@ -21,6 +21,11 @@ const MainSection = ({ setRefreshTable }) => {
       const err = error.response;
       if (err.status === 400) {
         toast.error(err.data.message);
+      }
+      if (err.status === 401) {
+        toast.error("Session Timeout");
+        localStorage.removeItem("token");
+        setCloseModal(false);
       }
     }
     setIsLoading(false);
@@ -45,7 +50,7 @@ const MainSection = ({ setRefreshTable }) => {
           />
           <button
             type="submit"
-            className=" h-8  w-[120px] bg-white px-1 text-sm font-bold text-black transition-colors duration-300 hover:bg-secondary sm:ms-7 sm:h-11   sm:w-[150px] sm:px-5 sm:text-lg "
+            className=" h-8  w-[120px] bg-white px-1 text-sm font-bold text-black transition-colors duration-300 hover:bg-secondary disabled:pointer-events-none disabled:opacity-70   sm:ms-7 sm:h-11 sm:w-[150px] sm:px-5 sm:text-lg "
             disabled={isLoading}
           >
             {isLoading ? "Loading..." : "Shorten URL"}
