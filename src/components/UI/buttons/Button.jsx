@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 
-import DotLoader from "../Loader/DotLoader";
+import DotLoader from "../loader/DotLoader";
 
 const Button = ({ isLoading, onClickHandler, children, type }) => {
   return (
     <button
       type={type}
-      className=" px-[20px] py-1 rounded-md bg-primary hover:opacity-90 text-white transition-opacity cursor-pointer disabled:pointer-events-none disabled:opacity-80 h-[35px] min-w-[100px] text-center"
+      className=" h-[35px] min-w-[100px] cursor-pointer rounded-md bg-primary px-[20px] py-1 text-center text-white transition-opacity hover:opacity-90 disabled:pointer-events-none disabled:opacity-80"
       onClick={onClickHandler}
       disabled={isLoading}
     >
