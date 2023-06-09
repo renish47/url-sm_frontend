@@ -62,7 +62,7 @@ const Tr = ({ url, fetchData }) => {
       {/* <td className="p-2 sm:p-3">
               0 min<span className=" hidden sm:inline">utes</span> ago
             </td> */}
-      <td className="w-[20%] p-2 sm:w-[25%]  sm:p-3">
+      <td className="w-[20%] p-2 sm:w-[30%]  sm:p-3">
         <a
           href={"http://" + baseUrl + url.shortUrlId}
           target="_blank"
