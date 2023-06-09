@@ -34,8 +34,8 @@ const Tr = ({ url, fetchData }) => {
   }
 
   let shorturl = baseUrl + url.shortUrlId;
-  if (shorturl.length > 15) {
-    shorturl = shorturl.slice(0, 15) + " " + shorturl.slice(15);
+  if (shorturl.length > 14) {
+    shorturl = shorturl.slice(0, 14) + " " + shorturl.slice(14);
   }
   if (shorturl.length > 30) {
     shorturl = shorturl.slice(0, 30) + " " + shorturl.slice(30);
