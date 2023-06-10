@@ -78,7 +78,7 @@ const SignIn = ({
   }, [isFormValid]);
   return (
     <>
-      <BackButton onClickHandler={backToLogin} />
+      <BackButton onClickHandler={backToLogin} isLoading={isLoading} />
       <form
         ref={formRef}
         onSubmit={submitHandler}
